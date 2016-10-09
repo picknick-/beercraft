@@ -5,23 +5,21 @@ import com.vaadin.ui.Label;
 import com.vaadin.ui.VerticalLayout;
 import com.vaadin.ui.Window;
 
-/**
- * Created by master on 07/10/16.
- */
 public class NotificationWindow extends Window {
-    public NotificationWindow() {
-        super("Subs on Sale");
+    public NotificationWindow(String title,String body) {
+        super(title);
         center();
-
         // Some basic content for the window
         VerticalLayout content = new VerticalLayout();
-        content.addComponent(new Label("Just say it's OK!"));
+        content.addComponent(new Label(body));
         content.setMargin(true);
         setContent(content);
+        //Disable size change
+        setResizable(false);
+        //Set only window as active.
         setModal(true);
         // Disable the close button
         setClosable(false);
-
         // Trivial logic for closing the sub-window
         Button ok = new Button("OK");
         ok.addClickListener(new Button.ClickListener() {

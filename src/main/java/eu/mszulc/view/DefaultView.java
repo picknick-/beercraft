@@ -13,13 +13,11 @@ public class DefaultView extends VerticalLayout implements View {
     public static final String VIEW_NAME = "";
 
     @PostConstruct
-    void init()
-    {
+    void init() {
         addComponent(new Label("This is the default view"));
     }
 
     @Override
-    public void enter(ViewChangeListener.ViewChangeEvent event)
-    {
+    public void enter(ViewChangeListener.ViewChangeEvent event) {
     }
 }

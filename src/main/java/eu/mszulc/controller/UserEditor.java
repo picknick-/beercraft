@@ -1,4 +1,5 @@
 package eu.mszulc.controller;
+
 import eu.mszulc.model.User;
 import eu.mszulc.model.UserDao;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,15 +15,6 @@ import com.vaadin.ui.TextField;
 import com.vaadin.ui.VerticalLayout;
 import com.vaadin.ui.themes.ValoTheme;
 
-/**
- * A simple example to introduce building forms. As your real application is
- * probably much more complicated than this example, you could re-use this form in
- * multiple places. This example component is only used in VaadinUI.
- * <p>
- * In a real world application you'll most likely using a common super class for all your
- * forms - less code, better UX. See e.g. AbstractForm in Virin
- * (https://vaadin.com/addon/viritin).
- */
 @SpringComponent
 @UIScope
 public class UserEditor extends VerticalLayout {
@@ -73,8 +65,7 @@ public class UserEditor extends VerticalLayout {
         if (persisted) {
             // Find fresh entity for editing
             user = repository.findOne(c.getId());
-        }
-        else {
+        } else {
             user = c;
         }
         cancel.setVisible(persisted);

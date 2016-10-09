@@ -61,8 +61,7 @@ public class ListView extends VerticalLayout implements View {
         grid.addSelectionListener(e -> {
             if (e.getSelected().isEmpty()) {
                 editor.setVisible(false);
-            }
-            else {
+            } else {
                 editor.editUser((User) grid.getSelectedRow());
             }
         });
@@ -85,8 +84,7 @@ public class ListView extends VerticalLayout implements View {
         if (StringUtils.isEmpty(text)) {
             grid.setContainerDataSource(
                     new BeanItemContainer(User.class, repo.findAll()));
-        }
-        else {
+        } else {
             grid.setContainerDataSource(new BeanItemContainer(User.class,
                     repo.findByEmailStartsWithIgnoreCase(text)));
         }

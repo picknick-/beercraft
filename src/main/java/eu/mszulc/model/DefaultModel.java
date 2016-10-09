@@ -9,7 +9,7 @@ import java.util.Date;
 public class DefaultModel {
 
     @Id
-    @GeneratedValue(strategy= GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
     private Date createAt = new Date();

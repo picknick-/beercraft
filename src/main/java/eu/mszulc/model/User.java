@@ -8,8 +8,8 @@ import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
 
 @Entity
-@Table(name="users")
-public class User extends DefaultModel{
+@Table(name = "users")
+public class User extends DefaultModel {
 
     @NotNull
     private String email;
@@ -19,7 +19,8 @@ public class User extends DefaultModel{
 
     // Public methods
 
-    protected User() { }
+    protected User() {
+    }
 
     public User(long id) {
 
@@ -51,6 +52,6 @@ public class User extends DefaultModel{
     public String toString() {
         return String.format(
                 "User[id=%d, Email='%s', Name='%s' Date='%s']",
-                getId(), email, name,getCreateAt());
+                getId(), email, name, getCreateAt());
     }
 }

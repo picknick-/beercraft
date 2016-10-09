@@ -12,12 +12,12 @@ import org.springframework.context.annotation.Bean;
 @SpringBootApplication
 public class BeercraftApplication {
 
-	private static final Logger log = LoggerFactory.getLogger(BeercraftApplication.class);
+    private static final Logger log = LoggerFactory.getLogger(BeercraftApplication.class);
 
 
-	public static void main(String[] args) {
-		SpringApplication.run(BeercraftApplication.class, args);
-	}
+    public static void main(String[] args) {
+        SpringApplication.run(BeercraftApplication.class, args);
+    }
 
 }
 

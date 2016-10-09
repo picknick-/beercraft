@@ -12,6 +12,7 @@ import eu.mszulc.view.AnotherViewInAWall;
 import eu.mszulc.view.DefaultView;
 import eu.mszulc.view.GreetView;
 import eu.mszulc.view.ListView;
+import eu.mszulc.view.util.NotificationWindow;
 import org.springframework.beans.factory.annotation.Autowired;
 
 @Theme("valo")
@@ -44,6 +45,7 @@ public class SiteUI extends UI {
 
         Navigator navigator = new Navigator(this, viewContainer);
         navigator.addProvider(viewProvider);
+        addWindow(new NotificationWindow("Hey, Listen!`", "Go to Kokoroki forrest"));
     }
 
     private Button createNavigationButton(String caption, final String viewName) {
